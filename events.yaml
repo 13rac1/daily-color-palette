@@ -1,0 +1,106 @@
+---
+- name: Default
+  schedule:
+    default: true
+  colors:
+    - white: 0xFFFFFF
+
+# Four Season defaults (Northern Hemisphere only)
+- name: Spring
+  schedule: # Meterological Start March 1
+    range-date:
+      - 03-01
+      - 05-30
+  colors:
+    - flowers:
+    - grass:
+    - rain:
+
+- name: Summer
+  schedule:
+    range-date: # Meterological Start June 1
+      - 06-01
+      - 08-31
+  colors:
+    - sun:
+    - skyblue:
+
+- name: Fall
+  schedule:
+    range-date: # Meterological Start September 1
+      - 09-01
+      - 11-30
+  colors:
+    - pumpkin:
+    - squash:
+
+- name: Winter
+  schedule:
+    range-date: # Meterological Start December 1
+      - 12-01
+      - 02-29 # Including the 29th to handle leap years.
+  colors:
+    - snow:
+    - ice:
+    - evergreen:
+
+# Scheduled Events
+- name: New Year's Day
+  description: First day of the year.
+  schedule:
+    month: 1
+    day: 1
+  colors:
+    - white:
+    - gold:
+
+- name: Martin Luther King Jr. Day
+  description: The birthday of Martin Luther King Jr.
+  schedule: # Third Monday in January
+    month: 1
+    weekday: Monday
+    offset: 3
+  colors:
+    - red:
+    - white:
+    - blue:
+
+- name: Groundhog Day
+  description: There will be six more weeks of winter if the groundhog sees his shadow.
+  schedule:
+    month: 2
+    day: 2
+  colors:
+    - sun:
+    - skyblue:
+    - grass:
+    - shadowedgrass:
+
+- name: Valentine's Day
+  schedule:
+    month: 2
+    day: 14
+  colors:
+    - white:
+    - heartred:
+# Stephen Hawking's Birthday - Jan 8th - Blue(sky), Green(grass), Orange(sun), yellow(star)
+# George Washington’s Birthday Feb - Red, white, blue
+# Chinese New Year - Feb 5th to 19 - Red, white, Gold
+# Presidents Day Feb 19th - red white blue
+# Holi - March 2 - Pastel Rainbow
+# Fat Tuesday - March 5th - Purple, Green, Yellow
+# St Patricks - Mar  17 - Green, Yellow
+# Cesar Chavez March 31 - Red, white, black - Match the protest flag
+# Easter April 21 - Pastels
+# Earth Day April 22 - Blues, Greens, Sand, Ice
+# Cinco de Mayo - Mexican Flag
+# Memorial Day May - Red, white, blue
+# Pride June - 7 color rainbow
+# Independence Day July 4 - Red, white, blue
+# Labor Day September 2 - Red, white, blue
+# Columbus Day October 14 - Red, White, Green
+# Halloween - Orange, Black
+# Veterans Day November 11 - Red, white, blue
+# Thanksgiving Day November 28 - Orange Yellow
+# Festivus - Green, Red, and Sienfeld yellow
+# Christmas Day - Green, red
