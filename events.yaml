@@ -1,106 +1,245 @@
 ---
-- name: Default
-  schedule:
-    default: true
+version: 1
+default:
   colors:
-    - white: 0xFFFFFF
+    - white: ffffff
 
-# Four Season defaults (Northern Hemisphere only)
-- name: Spring
-  schedule: # Meterological Start March 1
-    range-date:
-      - 03-01
-      - 05-30
-  colors:
-    - flowers:
-    - grass:
-    - rain:
+events:
+  # Four Season defaults (Northern Hemisphere)
+  - name: Spring
+    schedule: # Meterological Start March 1
+      range-date:
+        - 03-01
+        - 05-30
+    colors:
+      - rain: 4a6583
+      - tulip: c42673
+      - daffodil: fcd80a
+      - hyacinth: 9860f7
 
-- name: Summer
-  schedule:
-    range-date: # Meterological Start June 1
-      - 06-01
-      - 08-31
-  colors:
-    - sun:
-    - skyblue:
+  - name: Summer
+    schedule:
+      range-date: # Meterological Start June 1
+        - 06-01
+        - 08-31
+    colors:
+      - sun:
+      - skyblue:
+      - grass:
+      - sunflower:
+      - poppy:
 
-- name: Fall
-  schedule:
-    range-date: # Meterological Start September 1
-      - 09-01
-      - 11-30
-  colors:
-    - pumpkin:
-    - squash:
+  - name: Fall
+    schedule:
+      range-date: # Meterological Start September 1
+        - 09-01
+        - 11-30
+    colors:
+      - red-leaves:
+      - pumpkin:
+      - squash:
 
-- name: Winter
-  schedule:
-    range-date: # Meterological Start December 1
-      - 12-01
-      - 02-29 # Including the 29th to handle leap years.
-  colors:
-    - snow:
-    - ice:
-    - evergreen:
+  - name: Winter
+    schedule:
+      range-date: # Meterological Start December 1
+        - 12-01
+        - 02-29 # Including the 29th to handle leap years.
+    colors:
+      - snow: d6f3ff
+      - evergreen: 448c29
+      - warm-fire:
+      - light-evergreen: 70bf4c
+      - ice: 93e0ff
 
-# Scheduled Events
-- name: New Year's Day
-  description: First day of the year.
-  schedule:
-    month: 1
-    day: 1
-  colors:
-    - white:
-    - gold:
+  # Scheduled Events
+  - name: New Year's Day
+    description: First day of the year.
+    schedule:
+      month: 1
+      day: 1
+    colors:
+      - white: ffffff
+      - gold: ffd700
 
-- name: Martin Luther King Jr. Day
-  description: The birthday of Martin Luther King Jr.
-  schedule: # Third Monday in January
-    month: 1
-    weekday: Monday
-    offset: 3
-  colors:
-    - red:
-    - white:
-    - blue:
+  - name: Martin Luther King Jr. Day
+    description: The birthday of Martin Luther King Jr.
+    schedule: # Third Monday in January
+      month: 1
+      weekday: Monday
+      offset: 3
+    colors:
+      - old-glory-red: b22234
+      - white: ffffff
+      - old-glory-blue: 3c3b6E
 
-- name: Groundhog Day
-  description: There will be six more weeks of winter if the groundhog sees his shadow.
-  schedule:
-    month: 2
-    day: 2
-  colors:
-    - sun:
-    - skyblue:
-    - grass:
-    - shadowedgrass:
+  - name: Groundhog Day
+    description: There will be six more weeks of winter if the groundhog sees his shadow.
+    schedule:
+      month: 2
+      day: 2
+    colors:
+      - sun:
+      - sky-blue: 87ceeb
+      - grass:
+      - shadowed-grass:
 
-- name: Valentine's Day
-  schedule:
-    month: 2
-    day: 14
-  colors:
-    - white:
-    - heartred:
-# Stephen Hawking's Birthday - Jan 8th - Blue(sky), Green(grass), Orange(sun), yellow(star)
-# George Washington’s Birthday Feb - Red, white, blue
-# Chinese New Year - Feb 5th to 19 - Red, white, Gold
-# Presidents Day Feb 19th - red white blue
-# Holi - March 2 - Pastel Rainbow
-# Fat Tuesday - March 5th - Purple, Green, Yellow
-# St Patricks - Mar  17 - Green, Yellow
-# Cesar Chavez March 31 - Red, white, black - Match the protest flag
-# Easter April 21 - Pastels
-# Earth Day April 22 - Blues, Greens, Sand, Ice
-# Cinco de Mayo - Mexican Flag
-# Memorial Day May - Red, white, blue
-# Pride June - 7 color rainbow
-# Independence Day July 4 - Red, white, blue
-# Labor Day September 2 - Red, white, blue
-# Columbus Day October 14 - Red, White, Green
-# Halloween - Orange, Black
-# Veterans Day November 11 - Red, white, blue
-# Thanksgiving Day November 28 - Orange Yellow
-# Festivus - Green, Red, and Sienfeld yellow
-# Christmas Day - Green, red
+  - name: Valentine's Day
+    schedule:
+      month: 2
+      day: 14
+    colors:
+      - white: ffffff
+      - heart-red:
+
+  - name: Washington's Birthday (President's Day)
+    schedule: # Third Monday in Febuary
+      month: 2
+      weekday: Monday
+      offset: 3
+    colors:
+      - old-glory-red: b22234
+      - white: ffffff
+      - old-glory-blue: 3c3b6E
+
+  - name: Fat Tuesday
+    schedule:
+      exact-date:
+        - 3-5-2019
+    colors:
+      - purple:
+      - green:
+      - gold: ffd700
+
+  - name: St Patrick's Day
+    schedule:
+      month: 3
+      day: 17
+    colors:
+      - green:
+      - yellow:
+
+  - name: Cesar Chavez Day
+    schedule:
+      month: 3
+      day: 31
+    colors: # United Farm Workers Flag
+      - red:
+      - white:
+      - black:
+
+  - name: Earth Day
+    schedule:
+      month: 4
+      day: 22
+    colors:
+      - blue:
+      - green:
+      - ice:
+      - sand:
+
+  - name: Cinco de Mayo
+    schedule:
+      month: 5
+      day: 5
+    colors:
+      - green: 006847
+      - white: ffffff
+      - red: ce1126
+
+  - name: Memorial Day
+    schedule: # Last Monday in May
+      month: 5
+      weekday: Monday
+      offset: -1
+    colors:
+      - old-glory-red: b22234
+      - white: ffffff
+      - old-glory-blue: 3c3b6E
+
+  - name: Independence Day
+    schedule:
+      month: 7
+      day: 4
+    colors:
+      - old-glory-red: b22234
+      - white: ffffff
+      - old-glory-blue: 3c3b6E
+
+  - name: Memorial Day
+    schedule:
+      month: 9
+      weekday: Monday
+      offset: 1
+    colors:
+      - old-glory-red: b22234
+      - white: ffffff
+      - old-glory-blue: 3c3b6E
+
+  - name: Indigenous Peoples' Day / Columbus Day
+    schedule:
+      month: 10
+      weekday: Monday
+      offset: 2
+    colors: # Mixing colors of the Italian Flag and Medicine Wheel.
+      - italy-fern-green: 008c45
+      - red: ef0821
+      - italy-bright-white: f4f5f0
+      - yellow: f7f721
+      - italy-flame-scarlet: cd212a
+      - black: "000000"
+
+  - name: Halloween
+    schedule:
+      month: 10
+      day: 31
+    colors:
+      - orange: ffa500
+      - black: "000000"
+      - purple: a020f0
+
+  - name: Veterans Day
+    schedule:
+      month: 11
+      day: 11
+    colors:
+      - old-glory-red: b22234
+      - white: ffffff
+      - old-glory-blue: 3c3b6E
+
+  - name: Thanksgiving Day
+    schedule:
+      month: 11
+      weekday: Thursday
+      offset: -2
+    colors:
+      - pumpkin: ff7518
+      - corn: fbec5d
+      - cranberry: "840726"
+
+  - name: Festivus
+    schedule:
+      month: 12
+      day: 23
+    colors:
+      - seinfeld-red: e30922
+      - seinfeld-yellow: fcd720ff
+
+  - name: Christmas Eve
+    schedule:
+      month: 12
+      day: 24
+    colors:
+      - holly:
+      - holly-berry:
+      - advent-purple:
+      - candle-flame:
+
+  - name: Christmas Day
+    schedule:
+      month: 12
+      day: 25
+    colors:
+      - holly:
+      - holly-berry:
+      - gold:
+      - mary-blue:
