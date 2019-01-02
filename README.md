@@ -29,7 +29,7 @@ events:
         - 03-01
         - 05-30
     colors: # Colors ordered by priority
-      - colorname: ffffff # six character RGB HEX value
+      colorname: ffffff # six character RGB HEX value
 ```
 
 ## TODO

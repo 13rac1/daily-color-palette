@@ -8,48 +8,47 @@ events:
   # Four Season defaults (Northern Hemisphere)
   - name: Spring
     schedule: # Meterological Start March 1
-      range-date:
-        - 03-01
-        - 05-30
+      range-date: 03-01
+        05-30
     colors:
-      - rain: 4a6583
-      - tulip: c42673
-      - daffodil: fcd80a
-      - hyacinth: 9860f7
+      rain: 4a6583
+      tulip: c42673
+      daffodil: fcd80a
+      hyacinth: 9860f7
 
   - name: Summer
     schedule:
       range-date: # Meterological Start June 1
-        - 06-01
-        - 08-31
+        06-01
+        08-31
     colors:
-      - sun:
-      - skyblue:
-      - grass:
-      - sunflower:
-      - poppy:
+      sun: fcd440
+      sky-blue: 67ceeb
+      grass: 90b540
+      poppy: e7290f
 
   - name: Fall
     schedule:
       range-date: # Meterological Start September 1
-        - 09-01
-        - 11-30
+        09-01
+        11-30
     colors:
-      - red-leaves:
-      - pumpkin:
-      - squash:
+      red-leaves: a42c09
+      pumpkin: cb6f46
+      butternut-squash: fbba69
+      echinacea: fe92e8
 
   - name: Winter
     schedule:
       range-date: # Meterological Start December 1
-        - 12-01
-        - 02-29 # Including the 29th to handle leap years.
+        12-01
+        02-29 # Including the 29th to handle leap years.
     colors:
-      - snow: d6f3ff
-      - evergreen: 448c29
-      - warm-fire:
-      - light-evergreen: 70bf4c
-      - ice: 93e0ff
+      snow: d6f3ff
+      evergreen: 448c29
+      warm-fire: b2542d
+      light-evergreen: 70bf4c
+      ice: 93e0ff
 
   # Scheduled Events
   - name: New Year's Day
@@ -58,8 +57,8 @@ events:
       month: 1
       day: 1
     colors:
-      - white: ffffff
-      - gold: ffd700
+      white: ffffff
+      gold: ffd700
 
   - name: Martin Luther King Jr. Day
     description: The birthday of Martin Luther King Jr.
@@ -68,9 +67,9 @@ events:
       weekday: Monday
       offset: 3
     colors:
-      - old-glory-red: b22234
-      - white: ffffff
-      - old-glory-blue: 3c3b6E
+      old-glory-red: b22234
+      white: ffffff
+      old-glory-blue: 3c3b6E
 
   - name: Groundhog Day
     description: There will be six more weeks of winter if the groundhog sees his shadow.
@@ -78,18 +77,18 @@ events:
       month: 2
       day: 2
     colors:
-      - sun:
-      - sky-blue: 87ceeb
-      - grass:
-      - shadowed-grass:
+      sun: fcd440
+      sky-blue: 87ceeb
+      grass: 90b540
+      shadowed-grass: 354f26
 
   - name: Valentine's Day
     schedule:
       month: 2
       day: 14
     colors:
-      - white: ffffff
-      - heart-red:
+      white: ffffff
+      heart-red: 8a0707
 
   - name: Washington's Birthday (President's Day)
     schedule: # Third Monday in Febuary
@@ -97,54 +96,54 @@ events:
       weekday: Monday
       offset: 3
     colors:
-      - old-glory-red: b22234
-      - white: ffffff
-      - old-glory-blue: 3c3b6E
+      old-glory-red: b22234
+      white: ffffff
+      old-glory-blue: 3c3b6E
 
   - name: Fat Tuesday
     schedule:
-      exact-date:
-        - 3-5-2019
+      exact-date: 3-5-2019
     colors:
-      - purple:
-      - green:
-      - gold: ffd700
+      purple: a000f0
+      gold: ffd700
+      green: 0000ff
 
   - name: St Patrick's Day
     schedule:
       month: 3
       day: 17
     colors:
-      - green:
-      - yellow:
+      irish-green: 169b62
+      irish-orange: ff883e
+      white: ffffff
 
   - name: Cesar Chavez Day
     schedule:
       month: 3
       day: 31
     colors: # United Farm Workers Flag
-      - red:
-      - white:
-      - black:
+      red: ff0000
+      white: ffffff
+      black: "000000"
 
   - name: Earth Day
     schedule:
       month: 4
       day: 22
     colors:
-      - blue:
-      - green:
-      - ice:
-      - sand:
+      sea-blue: 0195f9
+      forest-green: "658650"
+      clouds: e8e9ed
+      desert: f0e1bf
 
   - name: Cinco de Mayo
     schedule:
       month: 5
       day: 5
     colors:
-      - green: 006847
-      - white: ffffff
-      - red: ce1126
+      mexico-green: 006847
+      white: ffffff
+      mexico-red: ce1126
 
   - name: Memorial Day
     schedule: # Last Monday in May
@@ -152,18 +151,18 @@ events:
       weekday: Monday
       offset: -1
     colors:
-      - old-glory-red: b22234
-      - white: ffffff
-      - old-glory-blue: 3c3b6E
+      old-glory-red: b22234
+      white: ffffff
+      old-glory-blue: 3c3b6E
 
   - name: Independence Day
     schedule:
       month: 7
       day: 4
     colors:
-      - old-glory-red: b22234
-      - white: ffffff
-      - old-glory-blue: 3c3b6E
+      old-glory-red: b22234
+      white: ffffff
+      old-glory-blue: 3c3b6E
 
   - name: Memorial Day
     schedule:
@@ -171,9 +170,9 @@ events:
       weekday: Monday
       offset: 1
     colors:
-      - old-glory-red: b22234
-      - white: ffffff
-      - old-glory-blue: 3c3b6E
+      old-glory-red: b22234
+      white: ffffff
+      old-glory-blue: 3c3b6E
 
   - name: Indigenous Peoples' Day / Columbus Day
     schedule:
@@ -181,30 +180,30 @@ events:
       weekday: Monday
       offset: 2
     colors: # Mixing colors of the Italian Flag and Medicine Wheel.
-      - italy-fern-green: 008c45
-      - red: ef0821
-      - italy-bright-white: f4f5f0
-      - yellow: f7f721
-      - italy-flame-scarlet: cd212a
-      - black: "000000"
+      italy-fern-green: 008c45
+      red: ef0821
+      italy-bright-white: f4f5f0
+      yellow: f7f721
+      italy-flame-scarlet: cd212a
+      black: "000000"
 
   - name: Halloween
     schedule:
       month: 10
       day: 31
     colors:
-      - orange: ffa500
-      - black: "000000"
-      - purple: a020f0
+      orange: ffa500
+      black: "000000"
+      purple: a000f0
 
   - name: Veterans Day
     schedule:
       month: 11
       day: 11
     colors:
-      - old-glory-red: b22234
-      - white: ffffff
-      - old-glory-blue: 3c3b6E
+      old-glory-red: b22234
+      white: ffffff
+      old-glory-blue: 3c3b6E
 
   - name: Thanksgiving Day
     schedule:
@@ -212,34 +211,35 @@ events:
       weekday: Thursday
       offset: -2
     colors:
-      - pumpkin: ff7518
-      - corn: fbec5d
-      - cranberry: "840726"
+      pumpkin: ff7518
+      corn: fbec5d
+      cranberry: "840726"
 
   - name: Festivus
     schedule:
       month: 12
       day: 23
     colors:
-      - seinfeld-red: e30922
-      - seinfeld-yellow: fcd720ff
+      seinfeld-red: e30922
+      seinfeld-yellow: fcd720ff
+      holly: 439a51
 
   - name: Christmas Eve
     schedule:
       month: 12
       day: 24
     colors:
-      - holly:
-      - holly-berry:
-      - advent-purple:
-      - candle-flame:
+      holly: 439a51
+      holly-berry: ed2836
+      purple: a000f0
+      candle-flame: fee369
 
   - name: Christmas Day
     schedule:
       month: 12
       day: 25
     colors:
-      - holly:
-      - holly-berry:
-      - gold:
-      - mary-blue:
+      holly: 439a51
+      holly-berry: ed2836
+      gold: ffd700
+      mary-blue: 0342b9
